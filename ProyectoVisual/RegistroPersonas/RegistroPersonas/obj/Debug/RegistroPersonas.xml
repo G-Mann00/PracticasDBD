@@ -22,5 +22,30 @@ RegistroPersonas
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:RegistroPersonas.My.Resources.Resources.addButton24px">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RegistroPersonas.My.Resources.Resources.cleanButton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RegistroPersonas.My.Resources.Resources.deleteButton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RegistroPersonas.My.Resources.Resources.editButton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:RegistroPersonas.My.Resources.Resources.searchButton">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>

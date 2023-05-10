@@ -12,7 +12,7 @@
         _estado = estado
     End Sub
 
-    ''
+    'Propiedades'
     Public Property Id As Integer
         Get
             Return _id
@@ -22,7 +22,6 @@
         End Set
     End Property
 
-    'Propiedades'
     Public Property Nombre As String
         Get
             Return _nombre
