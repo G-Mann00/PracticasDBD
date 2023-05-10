@@ -101,7 +101,11 @@
       <DependentUpon>ADOConexion.tt</DependentUpon>
     </Compile>
     <Compile Include="dao\DCiudades.vb" />
-    <Compile Include="dao\Module1.vb" />
+    <Compile Include="DsBDPrueba26.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsBDPrueba26.xsd</DependentUpon>
+    </Compile>
     <Compile Include="entidades\Ciudades.vb" />
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
@@ -160,6 +164,17 @@
     </EntityDeploy>
     <None Include="ADOConexion.edmx.diagram">
       <DependentUpon>ADOConexion.edmx</DependentUpon>
+    </None>
+    <None Include="DsBDPrueba26.xsc">
+      <DependentUpon>DsBDPrueba26.xsd</DependentUpon>
+    </None>
+    <None Include="DsBDPrueba26.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsBDPrueba26.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DsBDPrueba26.xss">
+      <DependentUpon>DsBDPrueba26.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>

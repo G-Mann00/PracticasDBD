@@ -97,9 +97,9 @@ Partial Class FrmCiudad
         Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox1.Location = New System.Drawing.Point(9, 24)
-        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Margin = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GroupBox1.Padding = New System.Windows.Forms.Padding(2)
         Me.GroupBox1.Size = New System.Drawing.Size(495, 141)
         Me.GroupBox1.TabIndex = 1
         Me.GroupBox1.TabStop = False
@@ -108,7 +108,7 @@ Partial Class FrmCiudad
         '
         Me.ChkActivo.AutoSize = True
         Me.ChkActivo.Location = New System.Drawing.Point(331, 26)
-        Me.ChkActivo.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.ChkActivo.Margin = New System.Windows.Forms.Padding(2)
         Me.ChkActivo.Name = "ChkActivo"
         Me.ChkActivo.Size = New System.Drawing.Size(65, 21)
         Me.ChkActivo.TabIndex = 2
@@ -118,7 +118,7 @@ Partial Class FrmCiudad
         'TxtNombre
         '
         Me.TxtNombre.Location = New System.Drawing.Point(99, 58)
-        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtNombre.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtNombre.Name = "TxtNombre"
         Me.TxtNombre.Size = New System.Drawing.Size(366, 23)
         Me.TxtNombre.TabIndex = 3
@@ -137,8 +137,9 @@ Partial Class FrmCiudad
         '
         Me.TxtId.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TxtId.Location = New System.Drawing.Point(99, 24)
-        Me.TxtId.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.TxtId.Margin = New System.Windows.Forms.Padding(2)
         Me.TxtId.Name = "TxtId"
+        Me.TxtId.ReadOnly = True
         Me.TxtId.Size = New System.Drawing.Size(204, 23)
         Me.TxtId.TabIndex = 1
         '
@@ -158,9 +159,9 @@ Partial Class FrmCiudad
         Me.GbRegistro.Controls.Add(Me.DgvRegistros)
         Me.GbRegistro.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GbRegistro.Location = New System.Drawing.Point(9, 183)
-        Me.GbRegistro.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GbRegistro.Margin = New System.Windows.Forms.Padding(2)
         Me.GbRegistro.Name = "GbRegistro"
-        Me.GbRegistro.Padding = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.GbRegistro.Padding = New System.Windows.Forms.Padding(2)
         Me.GbRegistro.Size = New System.Drawing.Size(497, 221)
         Me.GbRegistro.TabIndex = 2
         Me.GbRegistro.TabStop = False
@@ -175,7 +176,7 @@ Partial Class FrmCiudad
         Me.DgvRegistros.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DgvRegistros.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DgvRegistros.Location = New System.Drawing.Point(2, 18)
-        Me.DgvRegistros.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.DgvRegistros.Margin = New System.Windows.Forms.Padding(2)
         Me.DgvRegistros.Name = "DgvRegistros"
         Me.DgvRegistros.ReadOnly = True
         Me.DgvRegistros.RowHeadersWidth = 51
@@ -192,7 +193,7 @@ Partial Class FrmCiudad
         Me.Controls.Add(Me.GbRegistro)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.ToolStrip1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "FrmCiudad"
         Me.Text = "Gestion de Ciudades"
         Me.ToolStrip1.ResumeLayout(False)

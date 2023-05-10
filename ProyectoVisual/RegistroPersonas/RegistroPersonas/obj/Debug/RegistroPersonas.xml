@@ -47,5 +47,90 @@ RegistroPersonas
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="T:RegistroPersonas.DsBDPrueba26">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26.CiudadDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26.PersonaDataTable">
+<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26.CiudadRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26.PersonaRow">
+<summary>
+Represents strongly named DataRow class.
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26.CiudadRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26.PersonaRowChangeEvent">
+<summary>
+Row event argument class
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26TableAdapters.CiudadTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26TableAdapters.PersonaTableAdapter">
+<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26TableAdapters.TableAdapterManager">
+<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+<member name="M:RegistroPersonas.DsBDPrueba26TableAdapters.TableAdapterManager.UpdateUpdatedRows(RegistroPersonas.DsBDPrueba26,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Update rows in top-down order.
+</summary>
+</member>
+<member name="M:RegistroPersonas.DsBDPrueba26TableAdapters.TableAdapterManager.UpdateInsertedRows(RegistroPersonas.DsBDPrueba26,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Insert rows in top-down order.
+</summary>
+</member>
+<member name="M:RegistroPersonas.DsBDPrueba26TableAdapters.TableAdapterManager.UpdateDeletedRows(RegistroPersonas.DsBDPrueba26,System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Delete rows in bottom-up order.
+</summary>
+</member>
+<member name="M:RegistroPersonas.DsBDPrueba26TableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member>
+<member name="M:RegistroPersonas.DsBDPrueba26TableAdapters.TableAdapterManager.UpdateAll(RegistroPersonas.DsBDPrueba26)">
+<summary>
+Update all changes to the dataset.
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26TableAdapters.TableAdapterManager.UpdateOrderOption">
+<summary>
+Update Order Option
+</summary>
+</member>
+<member name="T:RegistroPersonas.DsBDPrueba26TableAdapters.TableAdapterManager.SelfReferenceComparer">
+<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member>
 </members>
 </doc>
