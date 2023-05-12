@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.ComponentModel
+Imports System.Data.SqlClient
 Public Class DCiudades
     Dim strConn As String = My.Settings.StrConnection.ToString()
 
@@ -6,7 +7,7 @@ Public Class DCiudades
         Dim ds As New DataSet
         Try
             Dim conn As New SqlConnection(strConn)
-            Dim tSql As String = "Select idCiudad as N'Codigo', nombreCiudad as N'Ciudad' from Ciudad"
+            Dim tSql As String = "Select id as N'Codigo', nombre as N'Ciudad' from Ciudad"
             Dim da As New SqlDataAdapter(tSql, conn)
             da.Fill(ds)
         Catch ex As Exception
@@ -16,13 +17,14 @@ Public Class DCiudades
         Return ds
     End Function
 
+
     'Guardando registro'
     Public Function GuardarRegistros(ByVal ciudad As Ciudades) As Boolean
         Dim resultado As Boolean = False
         Try
             Dim conn As New SqlConnection(strConn)
             Dim cmd As New SqlCommand()
-            Dim tsql = "insert into Ciudad(nombreCiudad) values(@nombre)"
+            Dim tsql = "insert into Ciudad(nombre) values(@nombre)"
             cmd.Parameters.AddWithValue("@nombre", ciudad.Nombre)
             cmd.CommandType = CommandType.Text
             cmd.CommandText = tsql
@@ -39,11 +41,12 @@ Public Class DCiudades
         Return resultado
     End Function
 
+
     'Editando registro'
-    Public Function EditarRegistro(ByVal ciudad As Ciudades)
+    Public Function EditarRegistro(ByVal ciudad As Ciudades) As Boolean
         Dim flag = False
         Try
-            Dim tsql = "UPDATE Ciudad SET nombreCiudad = @nombre, estado = @estado where idCiudad = @id"
+            Dim tsql = "UPDATE Ciudad SET nombre = @nombre, estado = @estado where id = @id"
             Dim conn As New SqlConnection(My.Settings.StrConnection)
             Dim cmd As New SqlCommand(tsql, conn)
             cmd.Parameters.AddWithValue("@nombre", ciudad.Nombre)
@@ -59,5 +62,47 @@ Public Class DCiudades
                    MsgBoxStyle.Critical, "ERROR")
         End Try
         Return flag
+    End Function
+
+
+    'Eliminando registro'
+    Public Function EliminarRegistro(ByVal id As Integer) As Boolean
+        Dim resp As Boolean = False
+        Try
+            Dim tsql As String = "delete from Ciudad where id = @id"
+            Dim conn As New SqlConnection(strConn)
+            conn.Open()
+            Dim cmd As New SqlCommand(tsql, conn)
+            cmd.CommandType = CommandType.Text
+            cmd.Parameters.AddWithValue("@id", id)
+            If (cmd.ExecuteNonQuery <> 0) Then
+                resp = True
+            End If
+            conn.Close()
+        Catch ex As Exception
+            resp = False
+        End Try
+        Return resp
+    End Function
+
+    'Buscando registros'
+    Public Function BuscarRegistro(ByVal id As Integer) As Ciudad
+        Dim ciudad As New Ciudad
+        Try
+            Dim tsql As String = "select * from Ciudad where id = @id"
+            Dim conn As New SqlConnection(strConn)
+            Dim tbl As New DataTable
+            Dim da As New SqlDataAdapter(tsql, conn)
+            da.SelectCommand.Parameters.AddWithValue("@id", id)
+            da.Fill(tbl)
+            If tbl.Rows.Count > 0 Then
+                ciudad.id = tbl.Rows(0).Item("id")
+                ciudad.nombre = tbl.Rows(0).Item("nombre")
+                ciudad.estado = tbl.Rows(0).Item("estado")
+            End If
+        Catch ex As Exception
+
+        End Try
+        Return ciudad
     End Function
 End Class
