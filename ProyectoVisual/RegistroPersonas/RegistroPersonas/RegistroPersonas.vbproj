@@ -206,6 +206,8 @@
     <Content Include="recursos\cleanButton.png" />
     <Content Include="recursos\deleteButton.png" />
     <Content Include="recursos\editButton.png" />
+    <Content Include="recursos\newButton24px.png" />
+    <Content Include="recursos\saveButton.png" />
     <Content Include="recursos\searchButton.png" />
   </ItemGroup>
   <ItemGroup />
