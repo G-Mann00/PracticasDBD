@@ -90,4 +90,9 @@
         TxtNombre.Text = DgvRegistros.Rows(fila).Cells(1).Value
     End Sub
 
+    Private Sub BtnBuscar_Click(sender As Object, e As EventArgs) Handles BtnBuscar.Click
+        Dim dao As New DCiudades
+        DgvRegistros.DataSource = dao.buscarRegistro(TxtBuscar.Text.Trim).Tables(0)
+        DgvRegistros.Refresh()
+    End Sub
 End Class

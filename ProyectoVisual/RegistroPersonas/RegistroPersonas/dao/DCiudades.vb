@@ -105,4 +105,20 @@ Public Class DCiudades
         End Try
         Return ciudad
     End Function
+
+    Public Function buscarRegistro(ByVal nombre As String) As DataSet
+        Dim ds As New DataSet
+        nombre = nombre + "%"
+        Try
+            Dim conn As New SqlConnection(strConn)
+            Dim tSql As String = "Select id as N'Codigo', nombre as N'Ciudad' from Ciudad where nombre like @nombre"
+            Dim da As New SqlDataAdapter(tSql, conn)
+            da.SelectCommand.Parameters.AddWithValue("@nombre", nombre)
+            da.Fill(ds)
+        Catch ex As Exception
+            MsgBox("Ha ocurrido un error al obtener los registros " & ex.Message,
+                   MsgBoxStyle.Critical, "ERROR")
+        End Try
+        Return ds
+    End Function
 End Class
