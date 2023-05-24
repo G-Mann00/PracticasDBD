@@ -12,4 +12,9 @@
         frm.Show()
     End Sub
 
+    Private Sub ReporteDePersonasToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReporteDePersonasToolStripMenuItem.Click
+        Dim frm As New FrmVistaPrevia
+        frm.MdiParent = Me
+        frm.Show()
+    End Sub
 End Class

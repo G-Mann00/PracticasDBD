@@ -28,6 +28,8 @@ Partial Class Form1
         Me.FormularioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CiudadToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PersonaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReportesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ReporteDePersonasToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -36,11 +38,11 @@ Partial Class Form1
         Me.MenuStrip1.BackColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(153, Byte), Integer), CType(CType(228, Byte), Integer))
         Me.MenuStrip1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.FormularioToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ArchivoToolStripMenuItem, Me.FormularioToolStripMenuItem, Me.ReportesToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(4, 2, 0, 2)
-        Me.MenuStrip1.Size = New System.Drawing.Size(600, 25)
+        Me.MenuStrip1.Padding = New System.Windows.Forms.Padding(5, 2, 0, 2)
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 28)
         Me.MenuStrip1.TabIndex = 0
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -48,13 +50,13 @@ Partial Class Form1
         '
         Me.ArchivoToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
         Me.ArchivoToolStripMenuItem.Name = "ArchivoToolStripMenuItem"
-        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(67, 21)
+        Me.ArchivoToolStripMenuItem.Size = New System.Drawing.Size(79, 24)
         Me.ArchivoToolStripMenuItem.Text = "Archivo"
         '
         'SalirToolStripMenuItem
         '
         Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
-        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(104, 22)
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'FormularioToolStripMenuItem
@@ -62,30 +64,43 @@ Partial Class Form1
         Me.FormularioToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CiudadToolStripMenuItem, Me.PersonaToolStripMenuItem})
         Me.FormularioToolStripMenuItem.ForeColor = System.Drawing.Color.Black
         Me.FormularioToolStripMenuItem.Name = "FormularioToolStripMenuItem"
-        Me.FormularioToolStripMenuItem.Size = New System.Drawing.Size(87, 21)
+        Me.FormularioToolStripMenuItem.Size = New System.Drawing.Size(103, 24)
         Me.FormularioToolStripMenuItem.Text = "Formulario"
         '
         'CiudadToolStripMenuItem
         '
         Me.CiudadToolStripMenuItem.Name = "CiudadToolStripMenuItem"
-        Me.CiudadToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.CiudadToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.CiudadToolStripMenuItem.Text = "Ciudad"
         '
         'PersonaToolStripMenuItem
         '
         Me.PersonaToolStripMenuItem.Name = "PersonaToolStripMenuItem"
-        Me.PersonaToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.PersonaToolStripMenuItem.Size = New System.Drawing.Size(224, 26)
         Me.PersonaToolStripMenuItem.Text = "Persona"
+        '
+        'ReportesToolStripMenuItem
+        '
+        Me.ReportesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ReporteDePersonasToolStripMenuItem})
+        Me.ReportesToolStripMenuItem.Name = "ReportesToolStripMenuItem"
+        Me.ReportesToolStripMenuItem.Size = New System.Drawing.Size(91, 24)
+        Me.ReportesToolStripMenuItem.Text = "Reportes"
+        '
+        'ReporteDePersonasToolStripMenuItem
+        '
+        Me.ReporteDePersonasToolStripMenuItem.Name = "ReporteDePersonasToolStripMenuItem"
+        Me.ReporteDePersonasToolStripMenuItem.Size = New System.Drawing.Size(250, 26)
+        Me.ReporteDePersonasToolStripMenuItem.Text = "Reporte de Personas"
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.MenuStrip1)
         Me.IsMdiContainer = True
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Registro de Personas"
@@ -103,4 +118,6 @@ Partial Class Form1
     Friend WithEvents FormularioToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CiudadToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents PersonaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReportesToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ReporteDePersonasToolStripMenuItem As ToolStripMenuItem
 End Class
